@@ -1,5 +1,0 @@
-0047BD31  |.  57            PUSH EDI
-
-
-006C74D5  ^\FF60 04         JMP DWORD PTR DS:[EAX+4]                 ; LuniaCli.004B6B30
-
