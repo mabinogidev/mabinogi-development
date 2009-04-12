@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    
+    <!-- Connection Settings -->
+    <Server>
+        <Servername>Avalon</Servername>
+        <ListenPort>15554</ListenPort>
+        <ServerIP>127.0.0.1</ServerIP>
+        <AllowPlayers>1</AllowPlayers>
+        <MaxConnections>100</MaxConnections>
+    </Server>
+  
+    <!-- Master Server -->
+    <Master>
+        <ServerIP>127.0.0.1</ServerIP>
+        <Port>15550</Port>
+        <Proof>puggy12</Proof>
+    </Master>
+    
+    <!-- Database Settings -->
+    <Database>
+      <servername>COMPUTER\SQLEXPRESS</servername>
+      <username>sa</username>
+      <password>puggy12</password>
+      <database>LuniaDB</database>  
+    </Database>
+
+    <!-- Console Settings -->
+    <Console>
+        <Width>20</Width>    
+    </Console>
+  
+    <!-- Directory Settings -->
+    <Path>
+        <datadir>../../Data</datadir>
+    </Path>
+</Config>

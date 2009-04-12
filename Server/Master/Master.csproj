@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{95C7DFC3-D0BF-44A2-AE37-5E85023BE15E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Master</RootNamespace>
+    <AssemblyName>Master</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkSubset>
+    </TargetFrameworkSubset>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuration\Config.Console.cs" />
+    <Compile Include="Configuration\Base.cs" />
+    <Compile Include="Configuration\Config.Server.cs" />
+    <Compile Include="Managers\Database\Provider.cs" />
+    <Compile Include="Network\SocketServer.cs" />
+    <Compile Include="Network\SocketClient.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\Debugging\Logger.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="config.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuration\Config.Database.cs" />
+    <Compile Include="Managers\Database\Database.Character.cs" />
+    <Compile Include="Managers\Database\Database.Authentication.cs" />
+    <Compile Include="Network\Client\Client.Authentication.cs" />
+    <Compile Include="Network\Client\Client.Character.cs" />
+    <Compile Include="Network\Client\Client.General.cs" />
+    <Compile Include="Network\Client\Client.Channel.cs" />
+    <Compile Include="Network\Client\Client.World.cs" />
+    <Compile Include="Network\Internal\CMSG_CONNECT_MASTER.cs" />
+    <Compile Include="Network\Internal\SMSG_SEND_SESSION.cs" />
+    <Compile Include="Network\PacketHandler.cs" />
+    <Compile Include="Network\Packet.cs" />
+    <Compile Include="Network\Packets\CMSG_ACCOUNT_LOGIN.cs" />
+    <Compile Include="Network\Packets\CMSG_CHANNEL_PREVIOUS.cs" />
+    <Compile Include="Network\Packets\CMSG_CHANNEL_SELECT.cs" />
+    <Compile Include="Network\Packets\CMSG_CHARACTER_CREATE.cs" />
+    <Compile Include="Network\Packets\CMSG_CHARACTER_SELECT.cs" />
+    <Compile Include="Network\Packets\CMSG_CHARACTER_DELETE.cs" />
+    <Compile Include="Network\Packets\CMSG_DISCONNECT.cs" />
+    <Compile Include="Network\Packets\CMSG_CLIENT_HASH.cs" />
+    <Compile Include="Network\Packets\SMSG_ACCOUNT_LOGIN.cs" />
+    <Compile Include="Network\Packets\SMSG_ACCOUNT_OPTIONS.cs" />
+    <Compile Include="Network\Packets\SMSG_CHANNEL_LIST.cs" />
+    <Compile Include="Network\Packets\SMSG_CHANNEL_SELECT.cs" />
+    <Compile Include="Network\Packets\SMSG_CHANNEL_SLIME.cs" />
+    <Compile Include="Network\Packets\SMSG_CHARACTER_CREATE.cs" />
+    <Compile Include="Network\Packets\SMSG_CHARACTER_LIST.cs" />
+    <Compile Include="Network\Packets\SMSG_CHARACTER_SELECT.cs" />
+    <Compile Include="Network\Packets\SMSG_CHARACTER_DELETE.cs" />
+    <Compile Include="Network\Packets\SMSG_CLIENT_HASH.cs" />
+    <Compile Include="Network\Packets\SMSG_PING.cs" />
+    <Compile Include="Structures\Account.cs" />
+    <Compile Include="Structures\Item.cs" />
+    <Compile Include="Structures\Square.cs" />
+    <Compile Include="Structures\Mobile.cs" />
+    <Compile Include="Utility\Conversions\Misc.cs" />
+    <Compile Include="Utility\Stream\PacketReader.cs" />
+    <Compile Include="Utility\Stream\PacketWriter.cs" />
+    <Compile Include="Utility\Time\Time.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

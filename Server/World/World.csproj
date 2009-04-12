@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EADAE308-C405-47C1-8F83-30CCC683E27A}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>World</RootNamespace>
+    <AssemblyName>World</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkSubset>
+    </TargetFrameworkSubset>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuration\Config.Console.cs" />
+    <Compile Include="Configuration\Base.cs" />
+    <Compile Include="Configuration\Config.Server.cs" />
+    <Compile Include="Managers\Database\Provider.cs" />
+    <Compile Include="Network\SocketServer.cs" />
+    <Compile Include="Network\SocketClient.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\Debugging\Logger.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="config.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuration\Config.Database.cs" />
+    <Compile Include="Configuration\Config.Master.cs" />
+    <Compile Include="Managers\Database\Database.Character.cs" />
+    <Compile Include="Network\Client\Client.Player.cs" />
+    <Compile Include="Network\Client\Client.General.cs" />
+    <Compile Include="Network\Internal\CMSG_ADD_SESSION.cs" />
+    <Compile Include="Network\Internal\SMSG_REMOVE_SESSION.cs" />
+    <Compile Include="Network\Internal\SMSG_CONNECT_MASTER.cs" />
+    <Compile Include="Network\PacketHandler.cs" />
+    <Compile Include="Network\Packet.cs" />
+    <Compile Include="Network\Packets\CMSG_PING.cs" />
+    <Compile Include="Network\Packets\CMSG_GET_SESSION.cs" />
+    <Compile Include="Network\Packets\SMSG_BAG_INFO.cs" />
+    <Compile Include="Network\Packets\SMSG_CHARACTER_INFO.cs" />
+    <Compile Include="Network\Packets\SMSG_STAGE_INFO.cs" />
+    <Compile Include="Network\Packets\SMSG_ENCRYPTION_KEY.cs" />
+    <Compile Include="Network\Packets\SMSG_PONG.cs" />
+    <Compile Include="PrimaryType\HashArray.cs" />
+    <Compile Include="Structure\Bag.cs" />
+    <Compile Include="PrimaryType\Character.cs" />
+    <Compile Include="Structure\Item.cs" />
+    <Compile Include="Structure\Point.cs" />
+    <Compile Include="Utility\Conversions\Misc.cs" />
+    <Compile Include="Utility\Stream\PacketReader.cs" />
+    <Compile Include="Utility\Stream\PacketWriter.cs" />
+    <Compile Include="Utility\Time\Time.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,74 @@
+[World Server]
+
+Send ->
+
+[Pet Info]
+[Emotion]
+[Start Action]
+[Character]
+
+Cash1_Life_Instant
+Eir
+Sieg
+Dainn
+Tia
+SlimeCharacter
+Dacy
+Krieg
+IceGirlCharacter
+ElfArcherCharacter
+
+Recv <-
+
+[Stage]
+Bags
+item_0
+ExpireDate
+BankBags
+
+listitem
+item_0
+
+Position
+item_1
+
+Position
+item_2
+
+Position
+item_3
+
+Position
+item_4
+
+Position
+item_5
+
+Position
+item_6
+
+ListQuickSlot
+
+[Pet Info]
+GN01_Default ?
+Emotion info?
+Start_action
+
+[Pet Info]
+GN01_Default ?
+Emotion info?
+Start_action
+
+Cash_Life+1_Instant
+Eir
+Sieg
+Dainn
+Tia
+SlimeCharacter
+Dacy
+Krieg
+IceGirlCharacter
+ElfArcherCharacter
+
+
+

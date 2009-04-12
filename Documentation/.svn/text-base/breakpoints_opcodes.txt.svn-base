@@ -1,0 +1,8 @@
+Breakpoints for Server->Client
+
+00A1AAED    8D50 08         LEA EDX,DWORD PTR DS:[EAX+8]
+
+00716174    8D0C2E          LEA ECX,DWORD PTR DS:[ESI+EBP]
+
+00A1A5D5  ^\FF62 04         JMP DWORD PTR DS:[EDX+4]                 ; LuniaCli.00711C90
+

@@ -1,0 +1,10 @@
+K 10
+svn:ignore
+V 74
+config.xml
+World.exe
+World.pdb
+World.vshost.exe
+World.vshost.exe.manifest
+
+END
